@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c80ef86633.js" crossorigin="anonymous"></script>
+    <script>
+        function shuffle() {
+            return 0.5 - Math.random();
+        }
+        var imagenums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        var projectnums = ["Potapljanje Ladjic (C++)", "Pametni Zvonec(ESP32 - Cam)", "Pametni Rastlinjak (ESP32)",
+            "Text to Speech (C++)", "AKAI MIDI Krmilnik (JavaScript)", "ESP8266 v1"
+        ];
+        imagenums.sort(shuffle);
+        projectnums.sort(shuffle);
+
+        function getRandomImage() {
+
+            var path = 'img/'; 
+            var num = imagenums[0];
+            imagenums.shift();
+            var img = "galerija" + num + ".jpg";
+            var imgStr = '<img src="' + path + img + '" alt = "">';
+            document.write(imgStr);
+            document.close();
+        }
+
+        function getRandomProject() {
+            var path = 'img/';
+            var name = projectnums[0];
+            projectnums.shift();
+            var img = name + ".jpg";
+            var imgAndTitle = '<span class="imgtitle-top">' + name + '</span><img src="' + path + img + '" alt = "">';
+            document.write(imgAndTitle);
+            document.close();
+        }
+    </script>
+    <title> Matic Šulc </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+
+    <div id="landing" class="landing">
+        <div id="navigation" class="navigation stick">
+            <i onclick="location='https://www.facebook.com'" class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+            <i onclick="location='https://www.instagram.com/maticsulc'" class="fa fa-instagram fa-lg"
+                aria-hidden="true"></i>
+            <i onclick="location='https://www.linkedin.com/in/maticsulc'" class="fa fa-linkedin-square fa-lg"
+                aria-hidden="true"></i>
+            <i onclick="location='https://www.github.com/maticsulc'" class="fab fa-github fa-lg"></i>
+            <a class="navbutton" href="#contact"> CONTACT </a>
+            <a class="navbutton" href="#about"> ABOUT </a>
+            <a class="navbutton" href="#projects"> PROJECTS </a>
+            <a class="navbutton active" href="#landing"> HOME </a>
+        </div>
+        <div class="titles">
+            <h2 class="main-title"> Matic Šulc </h2>
+            <h4> Photographer, Backend and Software Developer</h4>
+            <button onclick="location='#projects'" class="contact-btn"> VIEW MY WORK </button>
+            <span class="scroll-btn">
+                <a href="#">
+                    <span class="mouse">
+                        <span>
+                        </span>
+                    </span>
+                </a>
+                <p>scroll me</p>
+
+            </span>
+        </div>
+    </div>
+    <div id="projects" class="projects">
+        <div class="gallery">
+            <div class="row">
+                <div class="col">
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                </div>
+                <div class="col">
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                </div>
+                <div class="col">
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                </div>
+                <div class="col">
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                    <script type="text/javascript">
+                        getRandomImage();
+                    </script>
+                </div>
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="programs">
+            <div class="row">
+                <div class="col">
+                    <script type="text/javascript">
+                        getRandomProject();
+                    </script>
+                    <script type="text/javascript">
+                        getRandomProject();
+                    </script>
+                </div>
+                <div class="col">
+                    <script type="text/javascript">
+                        getRandomProject();
+                    </script>
+                    <script type="text/javascript">
+                        getRandomProject();
+                    </script>
+                </div>
+                <div class="col">
+                    <script type="text/javascript">
+                        getRandomProject();
+                    </script>
+                    <script type="text/javascript">
+                        getRandomProject();
+                    </script>
+                </div>
+
+            </div>
+        </div>
+        <hr class="divider">
+    </div>
+
+
+    <div id="about" class="about">
+
+        <div class="titles">
+            <h2> About me </h2>
+        </div>
+        <img src="img/matic.jpg">
+        <p>
+            My name is Matic Šulc and in was born on 6. 10. 2001.
+            I went to primary school in Selnica ob Dravi and now I am a student of Secondary school of electrical
+            engineering and computer science.
+            Currently, I am in the 4th year. Besides all the schoolwork, I have been doing lightning and sound design
+            for three years now.
+            I specialize in lightning but more recently I have been learning more about sound as well.
+            In all my school years, I have participated in a lot of extracurricular activities, my favorite being
+            research papers.
+            I think it has helped me a lot with my specialized subjects and my school performance in general.
+            In my opinion it is great for us to have the opportunity to get to know our line of work and all the
+            practical knowledge that comes with it so early.
+            This year, for example, I made three research papers and I can tell from my own experience, that your own
+            research
+            that you must make gave me a lot of additional and very valuable knowledge, that I would never get
+            otherwise.
+            During the summer breaks of my high school years I have also worked some student jobs, just to make some
+            extra money to spend during the year.
+            I worked at Nova KBM as Junior Systems Administrator, where I took care of computers,
+            networking and some general automation macros to keep my job easier. Looking at my technical side, I’ve been
+            learning programming in my free time.
+            I primarily work with backend web development, but I’m currently trying to merge with frontend web, since I
+            know JavaScript quite well.
+            I’ve also worked with C++ and Java for software development and done some web applications using the Node.js
+            framework.
+            Since some of my projects were IoT related, I also designed PCB’s for them.
+            You can check out a few of my projects on the website and others on my GitHub page in the upper left corner.
+        </p>
+
+    </div>
+    <div id="contact" class="contact">
+        <hr class="divider">
+        <div class="titles">
+            <h2> Contact me </h2>
+        </div>
+        <!-- BOOTSTRAP CONTACT FORM-->
+        <form class="contactform" onsubmit="alert('Bo delovalo s PHP in dodatno skripto')">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <input type="text" class="form-control" placeholder="Ime" required />
+                </div>
+                <div class="col-sm-6 form-group">
+                    <input type="email" class="form-control" placeholder="E-Mail" required />
+                </div>
+                <div class="col-md-12 form-group">
+                    <textarea name="" class="form-control" cols="47" rows="7" placeholder="Sporočilo"
+                        required></textarea>
+                </div>
+                <div class="col-md-12 form-group">
+                    <button class="btn btn-block btn-lg btn-dark">Submit</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p> © Matic Šulc 2020</p>
+    </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

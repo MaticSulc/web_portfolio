@@ -1,0 +1,421 @@
+body {
+    -ms-overflow-style: none;
+    /*remove scrollbar v explorer-ju */
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: darkgray;
+}
+
+.page-container {
+    position: relative;
+    height: 100%;
+}
+
+.landing,
+.projects,
+.about,
+.contact {
+    overflow: hidden;
+}
+
+.landing {
+    background-image: url("../img/landing.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.projects {
+    background-color: darkgray;
+    padding-bottom: 20px;
+}
+
+.about {
+    background-color: darkgray;
+}
+
+.contact {
+    background-color: darkgray;
+}
+
+.navigation {
+    padding: 10px;
+    z-index: 2;
+    /* to jo da pred vse elemente */
+}
+
+.footer {
+    background-color: #676966;
+    padding: 10px;
+    bottom: 0;
+    text-align: center;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navigation>.navbutton {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0px 10px 0px;
+    font-weight: 500;
+    float: right;
+}
+
+.navigation>i {
+    float: left;
+    height: 100%;
+    padding: 0px 6px 0px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.landing>.titles {
+    padding-top: 300px;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    top: 30%;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navigation>i:hover {
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.navigation>.navbutton:hover {
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.active {
+    color: #bc4343 !important; /*pobarvan aktiven meni */
+}
+
+.main-title {
+    padding-bottom: 20px;
+}
+
+.contact-btn {
+    background-color: #bc4343;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    margin-top: 40px;
+    font-size: 20px;
+    color: white;
+    padding: 5px 15px 5px;
+    margin-bottom: 50px;
+    opacity: 0.8;
+}
+
+.contact-btn:hover {    /* to je za mouse animacijo*/
+    opacity: 1;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.gallery .col {
+    /*default so 4 slike v galeriji*/
+    flex: 25%;
+    max-width: 25%;
+}
+
+.programs .col {
+    /*default so 3 programi*/
+    flex: 33%;
+    max-width: 33%;
+}
+
+.imgtitle-top {
+    position: absolute;
+    /*da slike ne umakne ko pride text na padding*/
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 40px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.col img {
+    /*to so vse slike v galeriji, programih */
+    margin: 25px 10px 10px 25px;
+    padding: 7px 7px 7px 7px;
+    vertical-align: middle;
+    width: 90%;
+    background-color: #676966;
+}
+
+.programs img {
+    padding: 50px 7px 30px 7px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 1500px) {
+
+    /*razmik slik quick fix*/
+    .col img {
+        margin: 25px 20px 10px 15px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    /*medium screen for tablets etc.*/
+    .gallery .col {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .imgtitle-top {
+        font-size: 13px;
+        padding-left: 50px;
+    }
+
+    .col img {
+        margin: 25px 20px 10px 15px;
+    }
+
+    .programs .col {
+        flex: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .landing .titles {
+        width: 500px;
+        padding-top: 400px;
+    }
+
+    .contact .titles {
+        width: 500px;
+    }
+
+    .about .titles {
+        width: 500px;
+    }
+
+    .navigation>.navbutton {
+        font-size: 15px;
+        padding: 0px 10px 0px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 500px) {
+    /*STANDARD MOBILE */
+
+    .about>img {
+        float: none !important;
+        padding: 0px 30px 0px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .landing .titles {
+        width: 300px;
+        padding-top: 150px;
+    }
+
+    .contact .titles {
+        width: 300px;
+    }
+
+    .about .titles {
+        width: 300px;
+    }
+
+    .navigation>.navbutton {
+        font-size: 10px;
+        padding: 0px 10px 0px;
+    }
+
+    .gallery .col {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .programs .col {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 372px) {
+
+    /*SMALL MOBILE */
+    .navigation>.navbutton {
+        font-size: 9px;
+        padding: 0px 5px 0px;
+    }
+
+    .landing .titles {
+        width: 250px;
+        padding-top: 120px;
+    }
+
+    .contact .titles {
+        width: 250px;
+    }
+
+    .about .titles {
+        width: 250px;
+    }
+
+    .gallery .col {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .programs .col {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+}
+
+body::-webkit-scrollbar {
+    /*remove scrollbar chrome, safari, opera */
+    display: none;
+}
+
+.divider {
+    margin-bottom: 10px;
+    width: 35%;
+    background-color: black;
+    height: 1.5px;
+}
+
+.titles {
+    padding-top: 20px;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    top: 30%;
+}
+
+.about>p {
+    text-align: justify;
+    padding: 20px 20px;
+}
+
+.about>img {
+    float: right;
+    padding: 0px 30px 0px;
+    height: 40vh;
+}
+
+.contactform {
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.contactform>label {
+    position: absolute;
+    width: 200px;
+}
+
+.contactform>.name {
+    left: -90%;
+    top: 15px;
+    text-align: right;
+}
+
+.contactform>.email {
+    right: -90%;
+    top: 15px;
+}
+
+.contactform>.message {
+    left: -45%;
+    top: 50%;
+    margin-top: -16px;
+    text-align: right;
+}
+
+
+@media (min-width:1200px) {
+    .contactform {
+        max-width: 525px;
+        /* ne leze cez cel ekran */
+    }
+}
+
+.footer>p {
+    padding-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* KOPIRANO */
+@keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+.scroll-btn .mouse {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 55px;
+    margin: 0 auto 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid white;
+    border-radius: 23px;
+}
+
+.scroll-btn .mouse>* {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: white;
+    border-radius: 50%;
+    -webkit-animation: ani-mouse 2.5s linear infinite;
+    -moz-animation: ani-mouse 2.5s linear infinite;
+    animation: ani-mouse 2.5s linear infinite;
+}
